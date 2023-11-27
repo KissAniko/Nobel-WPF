@@ -1,0 +1,44 @@
+﻿<Window x:Class="Nobel_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Nobel_WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="3.5*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <ScrollViewer>   
+            <TextBlock x:Name="txtEredmeny"
+                   FontSize="16"
+                   Background="Bisque"/>
+        </ScrollViewer>
+        
+        <DataGrid Grid.Row="1"
+                  x:Name="dgDijazottak"
+                  Margin="5"
+                  Background="LightCoral"/>
+        
+        <StackPanel Grid.Row ="2">
+            <StackPanel>
+                 <Label Content="Név"/>
+                <TextBox x:Name="txtNev"
+                    Margin="0 -20 0 0"
+                     Width="700"
+                     Height="20"/>
+            </StackPanel>
+            <StackPanel>
+                <Label Content="Év"/>
+                <ComboBox x:Name="cbEvek"
+                       Margin="0 -20 0 0"
+                       Width="700"
+                       Height="20"   />
+            </StackPanel>
+            
+        </StackPanel>
+    </Grid>
+</Window>
